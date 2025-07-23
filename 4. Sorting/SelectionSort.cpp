@@ -1,33 +1,40 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-void printArray(int arr[],int size){
-	for(int i=0;i<size;i++){
-		cout<<arr[i]<<" ";
-	}
-	cout<<endl;
+void printarray(int a[], int n){
+    for (int i=0; i<n; i++){
+        cout<<a[i]<<" ";
+    }
+    cout<<endl;
 }
 
-void selectionSort(int arr[],int size){
-	for(int select=0;select<size-1;select++){
-		int minIndex = select;
-		for(int i=select+1;i<size;i++){
-			if(arr[minIndex]>arr[i]){
-				minIndex = i;
-			}
-		}
-		int temp = arr[select];
-		arr[select] = arr[minIndex];
-		arr[minIndex] = temp;
-	}
+void selectionSort(int a[],int n){
+    int element,select,i;
+    for(select=0;select<n-1;select++){
+        element=select;
+        for(i=select+1;i<n;i++){
+            if(a[i] < a[element]){
+                element=i;
+            }
+        }
+        int temp = a[select];
+        a[select]= a[element];
+        a[element]= temp;
+    }
 }
 
+int main()
+{
+    int a[10]= {6,8,2,9,1,0,3,4,7,5};
+    int n= 10;
+    cout<<"Unsorted Array:"<<endl;
+    printarray(a,n);
 
-int main(){
-	int numbers[] = {7,3,9,1,2};
-	printArray(numbers,5);
-	selectionSort(numbers,5);
-	printArray(numbers,5);
+    cout<<"Using Selection Sort..."<<endl;
+    selectionSort(a,n);
 
-	return 0;
+    cout<<"Sorted Array:"<<endl;
+    printarray(a,n);
+
+    return 0;
 }
