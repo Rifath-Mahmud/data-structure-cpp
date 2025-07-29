@@ -68,7 +68,7 @@ void insertionSort(int arr[],int size){
 int main(){
 	int arr[7] = {1,7,9,12,15,23,25};
 	printArray(arr,7);
-	cout<< "Index of 23 using Liner Search:"<<linearSearch(arr,7,23)<<endl;
+	cout<< "Index of 23 using Linear Search:"<<linearSearch(arr,7,23)<<endl;
 	cout<< "Index of 23 using Binary Search:"<<binarySearch(arr,7,23)<<endl;
 
 
