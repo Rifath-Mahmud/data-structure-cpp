@@ -1,7 +1,6 @@
 #include<iostream>
 using namespace std;
 #include "Stack.h"
-#include "Stack.h"
 int main(){
 	Stack<int> s1(10);
 	s1.push(10);
