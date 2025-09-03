@@ -18,6 +18,7 @@ int getPriority(char c){
 	else if(c == '*' || c == '/'|| c == '%'){
 		return 2;
 	}
+	return 0;
 }
 
 int main(){

@@ -1,6 +1,6 @@
 #ifndef MY_STACK
-#define MY_STACK
 
+#define MY_STACK
 #include<iostream>
 using namespace std;
 
@@ -42,13 +42,15 @@ public:
 		}
 		else{
 			cout<<"Stack underflow.!"<<endl;
+			throw::underflow_error("Stack is Empty");
 		}
 	}
 
 	T topElement(){
-		if(!isEmpty())
+		if(!isEmpty()){
 			return arr[top-1];
-
+		}
+		throw::underflow_error("Stack is Empty");
 	}
 
 	void clear(){
