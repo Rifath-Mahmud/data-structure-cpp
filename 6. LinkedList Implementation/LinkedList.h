@@ -64,7 +64,7 @@ public:
 	}
 
 	void insertAtIndex(int index, T v){
-
+		//Try it yourself
 	}
 
 	void deleteAtFirst(){
@@ -72,17 +72,20 @@ public:
 			Node* temp = head;
 			head = head->next;
 			delete temp;
+			size--;
 		}
 	}
 	void deleteAtLast(){
-
+		//Try it yourself
 	}
 
 	void deleteAtIndex(int index){
-
+		//Try it yourself
 	}
 
 	int find(T v){
+		//Try it yourself
+
 		return -1;
 	}
 
