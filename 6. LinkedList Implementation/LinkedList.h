@@ -27,8 +27,8 @@ public:
 		return (head == nullptr);
 	}
 
-	int at(int index){
-		if(!isEmpty() || index>=0&& index<size ){
+	T at(int index){
+		if(!isEmpty() && index>=0&& index<size ){
 			if(index == 0){
 				return head->data;
 			}
@@ -73,6 +73,9 @@ public:
 			head = head->next;
 			delete temp;
 			size--;
+			if(isEmpty()){
+						curr = nullptr;
+				}
 		}
 	}
 	void deleteAtLast(){
