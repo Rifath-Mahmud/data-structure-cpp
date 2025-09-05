@@ -74,8 +74,8 @@ public:
 			delete temp;
 			size--;
 			if(isEmpty()){
-						curr = nullptr;
-				}
+				curr = nullptr;
+			}
 		}
 	}
 	void deleteAtLast(){
